@@ -12,12 +12,19 @@ import {
   Button,
 } from 'react-native';
 
+//exports the function so it can be used in the navigation
 export default function TicTacToe({navigation}){
+  //returns the rendered screen
   return(
+    //this view tag sets up the screen
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      {/*this text displays which screen the user's on*/}
       <Text>TicTacToe Screen</Text>
+      {/*this button lets the user navigate to the previous screen*/}
       <Button
+        //text for the button
         title="Go Home"
+        //the event that happes when the button is clicked which returns the user to the home screen
         onPress={() => navigation.navigate('Home')}
       />
     </View>
